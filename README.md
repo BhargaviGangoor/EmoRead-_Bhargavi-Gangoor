@@ -51,7 +51,8 @@ You can view and interact with the app here: [EmoRead on AI Studio](https://emor
 ## :inbox_tray: Running the App Locally
 
 ### Prerequisites
-- Node.js installed on your system  
+- Node.js 22.x or newer installed on your system  
+- npm 10 or newer (required for `npm ci`)
 - Gemini API key
 
 ### Installation
@@ -62,3 +63,26 @@ cd emoread
 
 # Install dependencies
 npm install
+```
+
+### Environment setup
+Create a `.env.local` file in the project root:
+
+```bash
+VITE_API_KEY=your_gemini_api_key
+```
+
+### Run locally
+```bash
+npm run dev
+```
+
+### Production build
+```bash
+npm run build
+```
+
+## :cloud: Azure deployment workflow
+- Set repository variable `AZURE_WEBAPP_NAME` with your Azure App Service name.
+- Set repository secret `AZURE_WEBAPP_PUBLISH_PROFILE` with your publish profile XML.
+- Push to `main` to trigger build and deployment.
