@@ -2,7 +2,7 @@
 import { GoogleGenAI } from "@google/genai";
 import type { EmotionDataPoint } from '../types';
 
-const API_KEY = (import.meta as any).env?.VITE_API_KEY;
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 if (!API_KEY) {
   console.warn("VITE_API_KEY environment variable not set. Gemini API calls will fail.");

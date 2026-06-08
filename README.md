@@ -51,7 +51,8 @@ You can view and interact with the app here: [EmoRead on AI Studio](https://emor
 ## :inbox_tray: Running the App Locally
 
 ### Prerequisites
-- Node.js installed on your system  
+- Node.js 22.x or newer installed on your system  
+- npm 10 or newer (required for `npm ci`)
 - Gemini API key
 
 ### Installation
